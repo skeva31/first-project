@@ -1,0 +1,212 @@
+.container{
+  
+   
+    margin: 0;
+    padding: 5%;
+    box-sizing: border-box;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 2fr 1fr;
+    grid-template-areas: 
+     "nav nav nav"
+     "main main main"
+     "footer footer footer";
+     width: 100vw;
+     height: 100vh;
+}
+nav{
+    grid-area: nav;
+
+display: flex;
+justify-content: space-between;
+
+}
+nav ul{
+   
+    right: 0;
+    list-style: none;
+    text-decoration: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    
+}
+nav ul li a:hover{
+    color: orange;
+}
+nav ul li{
+    display: inline-block;
+    margin: 1rem;
+}
+
+
+.logo{
+    position: relative;
+    left: 0;
+
+}
+
+main{
+    grid-area: main;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 50%;
+
+}
+
+footer{
+    grid-area: footer;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 6rem;
+   
+
+}
+.left img{
+    max-width: 600px;
+    height: 300px;
+    float: left;
+    grid-area: meh;
+    
+}
+.left{
+    margin-right: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: 
+    "meh meh"
+    "neh keh";
+    gap: 1rem;
+ 
+}
+.right{
+    position: relative;
+    left: 85px;
+    top: -2px;
+    color: white;
+    background-color: black;
+    padding: 20px;
+   
+}
+.right h1{
+    color: orange;
+}
+.right h3 a{
+    text-decoration: none;
+    color: white;
+    
+}
+.right h3 a:hover{
+    color: orange;
+}
+.right h3, .right h1{
+    margin-top: 70px;
+}
+footer img{
+    float: left;
+}
+.left h1{
+    grid-area: neh;
+}
+.ala{
+    grid-area: keh;
+}
+.ala{
+    position: relative;
+    left: 100px;
+}
+.one h3 a, .two h3 a, .three h3 a{
+    text-decoration: none;
+    color: black;
+}
+.one h3 a:hover, .two h3 a:hover, .three h3 a:hover{
+    color: orangered;
+}
+
+.one h1, .one h3, .one p, .two h1, .two h3, .two p, .three h1, .three h3, .three p{
+    position: relative;
+    left: 2rem;
+}
+footer h1{
+    color: cyan;
+}
+button{
+    
+    background-color: black;
+    color: white;
+    border: none;
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+}
+button:hover{
+    width: 300pzx;
+    height: 100px;
+    transition-duration: 1.5s;
+    background-color: cyan;
+    color: black;
+    transform: rotate(360deg);
+}
+@media only screen and (max-width: 600px) {
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "left"
+     "right"
+     "footer"
+     
+     
+     
+    ;
+gap: 10px;
+box-sizing: border-box;
+}
+.left{
+    grid-area: left;
+    width: 100%;
+}
+.right{
+    grid-area: right;
+    width: 100%;
+}
+footer{
+    grid-area: footer;
+}
+.left img{
+    max-width: 500px;
+}
+.right{
+    width: 100%;
+}
+footer{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: 
+    "one"
+    "two"
+    "three";
+}
+.one{
+    grid-area: one;
+    width: 100%;
+}
+.two{
+    grid-area: two;
+    width: 100%;
+}
+.three{
+    grid-area: three;
+    width: 100%;
+    
+}
+}
